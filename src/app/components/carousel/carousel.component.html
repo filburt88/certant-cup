@@ -1,30 +1,11 @@
-<c-carousel
-  [interval]="0"
-  class="carousel"
-  [animate]="false"
-  transition="crossfade"
->
-  <c-carousel-inner>
-    <c-carousel-item
-      *ngFor="let slide of slides"
-      class="carousel__slide-container"
-    >
-      <img
-        [src]="slide.src"
-        alt="{{ slide.title }}"
-        class="carousel__slide"
-        loading="lazy"
-      />
-    </c-carousel-item>
-  </c-carousel-inner>
-  <c-carousel-control
-    [routerLink]
-    caption="Previous"
-    direction="prev"
-  ></c-carousel-control>
-  <c-carousel-control
-    [routerLink]
-    caption="Next"
-    direction="next"
-  ></c-carousel-control>
-</c-carousel>
+<ngb-carousel *ngIf="images" class="carousel">
+    <ng-template ngbSlide *ngFor="let item of images">
+      <div class="">
+        <img class="carousel-slide" [src]="item.image" alt="Random first slide" />
+      </div>
+      <div class="carousel-caption">
+        <h3>Titulo Slide</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </ng-template>
+</ngb-carousel>

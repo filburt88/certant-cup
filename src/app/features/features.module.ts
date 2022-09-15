@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { MaterialModule } from '../material/material.module';
-import { CarouselModule } from '@coreui/angular';
+import { NgbootstrapModule } from '../ngbootstrap/ngbootstrap.module';
+
 import { SidenavComponent } from '../components/sidenav/sidenav.component';
 import { HomeComponent } from './private/home/home.component';
 import { FeaturesComponent } from './features.component';
@@ -15,7 +16,7 @@ import { CarouselComponent } from '../components/carousel/carousel.component';
     CommonModule,
     FeaturesRoutingModule,
     MaterialModule,
-    CarouselModule,
+    NgbootstrapModule
   ],
 })
 export class FeaturesModule {}

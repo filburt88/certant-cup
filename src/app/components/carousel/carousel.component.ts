@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-config';
 
 @Component({
   selector: 'app-carousel',
@@ -6,24 +7,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
-  slides: any[] = new Array(3).fill({
-    id: -1,
-    src: '',
-    title: '',
-    subtitle: '',
-  });
+  images = [
+    {
+      image: `../../../assets/carouselImages/grupo_1.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_2.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_3.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_4.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_5.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_6.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_7.png`,
+    },
+    {
+      image: `../../../assets/carouselImages/grupo_8.png`,
+    },
+  ];
 
-  constructor() {}
-
-  ngOnInit(): void {
-    this.slides[0] = {
-      src: '../../../assets/carouselImages/grupo_1.png',
-    };
-    this.slides[1] = {
-      src: '../../../assets/carouselImages/grupo_2.png',
-    };
-    this.slides[2] = {
-      src: '../../../assets/carouselImages/grupo_3.png',
-    };
-  }
+  ngOnInit(): void {}
 }

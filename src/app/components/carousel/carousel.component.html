@@ -1,11 +1,19 @@
-<ngb-carousel *ngIf="images" class="carousel">
-    <ng-template ngbSlide *ngFor="let slide of images">
-      <div class="">
-        <img class="carousel-slide" [src]="slide.image" alt="Random first slide" />
-      </div>
-      <div class="carousel-caption">
-        <h3>{{slide?.caption}}</h3>
-        <p>{{slide?.text}}</p>
-      </div>
-    </ng-template>
+<ngb-carousel
+  *ngIf="images"
+  class="carousel"
+  [showNavigationIndicators]="false"
+>
+  <ng-template ngbSlide *ngFor="let slide of images">
+    <div class="">
+      <img
+        class="carousel-slide"
+        [src]="slide.image"
+        alt="Random first slide"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ slide?.caption }}</h3>
+      <p>{{ slide?.text }}</p>
+    </div>
+  </ng-template>
 </ngb-carousel>

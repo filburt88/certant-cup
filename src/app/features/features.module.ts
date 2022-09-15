@@ -3,12 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { CarouselModule } from '@coreui/angular';
 import { SidenavComponent } from '../components/sidenav/sidenav.component';
 import { HomeComponent } from './private/home/home.component';
 import { FeaturesComponent } from './features.component';
+import { CarouselComponent } from '../components/carousel/carousel.component';
 
 @NgModule({
-  declarations: [FeaturesComponent, SidenavComponent, HomeComponent],
-  imports: [CommonModule, FeaturesRoutingModule, MaterialModule],
+  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent],
+  imports: [
+    CommonModule,
+    FeaturesRoutingModule,
+    MaterialModule,
+    CarouselModule,
+  ],
 })
 export class FeaturesModule {}

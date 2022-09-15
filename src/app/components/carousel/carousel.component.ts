@@ -9,6 +9,11 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap/carousel/carousel-
 export class CarouselComponent implements OnInit {
   images = [
     {
+      image: `../../../assets/carouselImages/select-top-player.png`,
+      caption: 'Selecciona al Goleador',
+      text: 'No olvides elegir al goleador del mundial para sumar mas puntos',
+    },
+    {
       image: `../../../assets/carouselImages/grupo_1.png`,
     },
     {

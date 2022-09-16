@@ -26,6 +26,11 @@
 .sidenav__top-nav-button {
   background: #3ab795;
 }
+
+.sidenav__top-nav-container-links {
+  display: none;
+}
+
 .sidenav__top-nav-icon {
   color: $primary-text;
 }
@@ -36,20 +41,35 @@
   min-width: 60%;
 }
 
-.sidenav__drawer-links-container{
+.sidenav__drawer-links-container {
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 
-  &-image{
+  &-image {
     max-height: 100px;
   }
+}
 
-  a{
-    text-decoration: none;
-    color: $primary-text;
-    font-weight: bold;
+a {
+  text-decoration: none;
+  color: $primary-text;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .sidenav__top-nav-button {
+    display: none;
+  }
+
+  .sidenav__top-nav-container-links {
+    display: block;
+    display: flex;
+    align-items: center;
+    &-link {
+      margin: auto 10px;
+    }
   }
 }

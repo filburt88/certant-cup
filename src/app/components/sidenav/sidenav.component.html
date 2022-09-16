@@ -1,10 +1,5 @@
 <mat-drawer-container class="sidenav__container" hasBackdrop="true">
-  <mat-drawer
-    #drawer
-    class="sidenav__drawer"
-    mode="over"
-    class="sidenav__drawer"
-  >
+  <mat-drawer #drawer class="sidenav__drawer" mode="over">
     <div class="sidenav__drawer-links-container">
       <img
         class="sidenav__drawer-links-container-image"
@@ -34,6 +29,11 @@
       >
         <mat-icon class="sidenav__top-nav-icon">menu</mat-icon>
       </button>
+      <div class="sidenav__top-nav-container-links">
+        <div class="sidenav__top-nav-container-links-link" *ngFor="let link of links">
+          <a [routerLink]="link">{{ link | uppercase }}</a>
+        </div>
+      </div>
     </div>
     <div>
       <ng-content select="router-outlet"></ng-content>

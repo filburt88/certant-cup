@@ -6,7 +6,11 @@
     class="sidenav__drawer"
   >
     <div class="sidenav__drawer-links-container">
-      <img class="sidenav__drawer-links-container-image" src="../../../assets/logo/CERTANT.svg" alt="certant logo">
+      <img
+        class="sidenav__drawer-links-container-image"
+        src="../../../assets/logo/CERTANT.svg"
+        alt="certant logo"
+      />
       <div *ngFor="let link of links">
         <a [routerLink]="link">{{ link | uppercase }}</a>
       </div>
@@ -16,6 +20,7 @@
     <div class="sidenav__top-nav-container">
       <div>
         <img
+          routerLink="home"
           class="sidenav__top-nav-image"
           src="../../../assets/logo/CERTANT.svg"
           alt="Certant Cup Logo"

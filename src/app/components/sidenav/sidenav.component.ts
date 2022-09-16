@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
+  links : string[] = ['home', 'ranking', 'apuestas', 'goleadores', 'micuenta']
+
   constructor() { }
 
   ngOnInit(): void {

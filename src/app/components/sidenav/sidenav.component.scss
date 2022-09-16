@@ -1,0 +1,54 @@
+@import "../../../assets/styles/main.scss";
+
+.sidenav__container {
+  height: 100vh;
+}
+
+.sidenav__top-nav-container {
+  position: sticky;
+  top: 0;
+  overflow: visible;
+  background: $primary-color;
+  z-index: 15;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 1px 1px 5px rgb(167, 167, 167);
+}
+
+.sidenav__top-nav-image {
+  max-height: 65px;
+}
+
+.sidenav__top-nav-button {
+  background: #3ab795;
+}
+.sidenav__top-nav-icon {
+  color: $primary-text;
+}
+
+.sidenav__drawer {
+  height: 100%;
+  background: $primary-color;
+  min-width: 60%;
+}
+
+.sidenav__drawer-links-container{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  &-image{
+    max-height: 100px;
+  }
+
+  a{
+    text-decoration: none;
+    color: $primary-text;
+    font-weight: bold;
+  }
+}

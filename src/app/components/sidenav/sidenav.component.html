@@ -1,10 +1,37 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    soy el sidenav
+<mat-drawer-container class="sidenav__container" hasBackdrop="true">
+  <mat-drawer
+    #drawer
+    class="sidenav__drawer"
+    mode="over"
+    class="sidenav__drawer"
+  >
+    <div class="sidenav__drawer-links-container">
+      <img class="sidenav__drawer-links-container-image" src="../../../assets/logo/CERTANT.svg" alt="certant logo">
+      <div *ngFor="let link of links">
+        <a [routerLink]="link">{{ link | uppercase }}</a>
+      </div>
+    </div>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <div>Soy La Barra <button routerLink="home">Click me</button></div>
-    <ng-content select="router-outlet"></ng-content>
-  </div>
+  <mat-drawer-content>
+    <div class="sidenav__top-nav-container">
+      <div>
+        <img
+          class="sidenav__top-nav-image"
+          src="../../../assets/logo/CERTANT.svg"
+          alt="Certant Cup Logo"
+        />
+      </div>
+      <button
+        class="sidenav__top-nav-button"
+        (click)="drawer.toggle()"
+        mat-mini-fab
+        aria-label="menu icon"
+      >
+        <mat-icon class="sidenav__top-nav-icon">menu</mat-icon>
+      </button>
+    </div>
+    <div>
+      <ng-content select="router-outlet"></ng-content>
+    </div>
+  </mat-drawer-content>
 </mat-drawer-container>

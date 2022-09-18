@@ -1,41 +1,52 @@
-<mat-card class="card">
-  <mat-card-header class="card__header">
-    <div mat-card-avatar class="card__header-image-container">
-      <img
-        class="card__header-image"
-        src="../../../assets/wcLogo/WC-logo.svg"
-        alt="wc logo"
-      />
+<div class="card__container">
+  <mat-card class="card" *ngFor="let match of matches">
+    <mat-card-header class="card__header">
+      <div mat-card-avatar class="card__header-image-container">
+        <img
+          class="card__header-image"
+          src="../../../assets/wcLogo/WC-logo.svg"
+          alt="wc logo"
+        />
+      </div>
+      <mat-card-title class="card__header-title">{{
+        match.fase
+      }}</mat-card-title>
+      <mat-card-subtitle class="card__header-subtitle">{{
+        match.estadio
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="card__match-container">
+      <div class="card__match-container-team">
+        <img
+          class="card__match-container-team-flag"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/2560px-Flag_of_Argentina.svg.png"
+          alt="Bandera Equipo Local"
+        />
+        <div class="card__match-container-team-name">
+          {{ match.resultadoReal.nombreLocal }}
+        </div>
+      </div>
+      <div>vs</div>
+      <div class="card__match-container-team">
+        <img
+          class="card__match-container-team-flag"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
+          alt="Bandera Equipo Local"
+        />
+        <div class="card__match-container-team-name">
+          {{ match.resultadoReal.nombreVisitante }}
+        </div>
+      </div>
     </div>
-    <mat-card-title class="card__header-title">Grupo C</mat-card-title>
-    <mat-card-subtitle class="card__header-subtitle"
-      >Lusail Stadium</mat-card-subtitle
+    <mat-card-content class="card__info-container">
+      <div class="card__date">{{ match.fecha | date: "dd/MM/yy HH:mm" }}</div>
+      <div class="card__status">{{ match.estado }}</div>
+    </mat-card-content>
+    <mat-card-actions
+      class="card__action-container"
+      *ngIf="!match.resultadoReal.golesLocal"
     >
-  </mat-card-header>
-  <div class="card__match-container">
-    <div class="card__match-container-team">
-      <img
-        class="card__match-container-team-flag"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/2560px-Flag_of_Argentina.svg.png"
-        alt="Bandera Equipo Local"
-      />
-      <div class="card__match-container-team-name">Argentina</div>
-    </div>
-    <div>vs</div>
-    <div class="card__match-container-team">
-      <img
-        class="card__match-container-team-flag"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
-        alt="Bandera Equipo Local"
-      />
-      <div class="card__match-container-team-name">Arabia Saudita</div>
-    </div>
-  </div>
-  <mat-card-content class="card__info-container">
-    <div class="card__date">16/11/2022</div>
-    <div class="card__hour">16:00</div>
-  </mat-card-content>
-  <mat-card-actions class="card__action-container">
-    <button class="card__action-button" mat-raised-button>Apostar</button>
-  </mat-card-actions>
-</mat-card>
+      <button class="card__action-button" mat-raised-button>Apostar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

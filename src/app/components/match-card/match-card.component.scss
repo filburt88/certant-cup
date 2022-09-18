@@ -1,8 +1,23 @@
 @import "../../../assets/styles/main.scss";
 
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .card__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 .card {
   width: 350px;
   height: 316px;
+  margin: 20px;
 }
 
 .card__header {
@@ -68,4 +83,9 @@
 .card__action-button {
   background: $secondary-color;
   color: $primary-text;
+}
+
+.card__date {
+  font-weight: bold;
+  color: $accent-text;
 }

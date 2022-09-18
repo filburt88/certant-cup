@@ -1,0 +1,55 @@
+{
+  "partidos": [
+    {
+      "idPartido": 1,
+      "fase": "Grupo C",
+      "estadio": "Al Bayt Stadium",
+      "estado": "Apuestas Abiertas",
+      "fecha": "2022-09-18T13:41:06.016Z",
+      "resultadoReal": {
+        "idLocal": 1,
+        "nombreLocal": "Argentina",
+        "fotoLocal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+        "golesLocal": null,
+        "idVisitante": 2,
+        "nombreVisitante": "Arabia Saudita",
+        "fotoVisitante": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Saudi_Arabia_%28type_2%29.svg",
+        "golesVisitante": null
+      }
+    },
+    {
+      "idPartido": 1,
+      "fase": "Grupo C",
+      "estadio": "Al Bayt Stadium",
+      "estado": "Apuestas Abiertas",
+      "fecha": "2022-09-18T13:41:06.016Z",
+      "resultadoReal": {
+        "idLocal": 1,
+        "nombreLocal": "Argentina",
+        "fotoLocal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+        "golesLocal": null,
+        "idVisitante": 2,
+        "nombreVisitante": "Arabia Saudita",
+        "fotoVisitante": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Saudi_Arabia_%28type_2%29.svg",
+        "golesVisitante": null
+      }
+    },
+    {
+      "idPartido": 1,
+      "fase": "Grupo C",
+      "estadio": "Al Bayt Stadium",
+      "estado": "Apuestas Abiertas",
+      "fecha": "2022-09-18T13:41:06.016Z",
+      "resultadoReal": {
+        "idLocal": 1,
+        "nombreLocal": "Argentina",
+        "fotoLocal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+        "golesLocal": null,
+        "idVisitante": 2,
+        "nombreVisitante": "Arabia Saudita",
+        "fotoVisitante": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Saudi_Arabia_%28type_2%29.svg",
+        "golesVisitante": null
+      }
+    }
+  ]
+}

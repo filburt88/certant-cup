@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Slide {
+  image: string;
+  caption?: string;
+  text?: string;
+}
+
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements OnInit {
-  images = [
+  images: Slide[] = [
     {
       image: `../../../assets/carouselImages/select-top-player.png`,
       caption: 'Selecciona al Goleador',
-      text: 'No olvides elegir al goleador del mundial para sumar mas puntos',
     },
     {
       image: `../../../assets/carouselImages/grupo_1.png`,

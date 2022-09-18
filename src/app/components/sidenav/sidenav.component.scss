@@ -1,5 +1,9 @@
 @import "../../../assets/styles/main.scss";
 
+.sidenav__container{
+  background: linear-gradient(116.59deg, #040f5e 0.34%, #300008 100%);
+}
+
 .sidenav__container {
   height: 100vh;
 }
@@ -42,7 +46,7 @@
 }
 
 .sidenav__drawer-links-container {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -73,3 +77,4 @@ a {
     }
   }
 }
+

@@ -1,0 +1,71 @@
+@import "../../../assets/styles/main.scss";
+
+.card {
+  width: 350px;
+  height: 316px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card__header-image {
+  height: 60px;
+}
+
+.card__match-container-team-flag {
+  height: 60px;
+  width: 90px;
+}
+
+.card__match-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.card__match-container-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__match-container-team-name {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  color: $primary-text-dark;
+}
+
+.card__header-title {
+  font-weight: 800;
+  color: $primary-text-dark;
+  text-align: right;
+}
+
+.card__header-subtitle {
+  font-weight: 600;
+  text-align: right;
+}
+
+.card__info-container {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card__action-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.card__action-button {
+  background: $secondary-color;
+  color: $primary-text;
+}

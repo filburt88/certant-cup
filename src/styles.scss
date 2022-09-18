@@ -37,9 +37,14 @@ $certant-cup-theme: mat.define-light-theme(
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+@import './assets/styles/main.scss';
 
+html,
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
 }

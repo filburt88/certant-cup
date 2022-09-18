@@ -14,10 +14,13 @@ import { CustomDatePipe } from '../core/pipes/custom-date.pipe';
 import { TableComponent } from '../components/table/table.component';
 import { RankingComponent } from './private/ranking/ranking.component';
 import { SectionHeaderComponent } from '../components/section-header/section-header.component';
+import { ScorersTableComponent } from '../components/scorers-table/scorers-table.component';
+import { TopScorersComponent } from './private/top-scorers/top-scorers.component';
+
 
 
 @NgModule({
-  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent, MatchCardComponent, CustomDatePipe, TableComponent, RankingComponent, SectionHeaderComponent],
+  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent, MatchCardComponent, CustomDatePipe, TableComponent, RankingComponent, SectionHeaderComponent, ScorersTableComponent, TopScorersComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,

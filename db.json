@@ -121,5 +121,77 @@
       "apellido": "Osores",
       "puntos": 0
     }
+  ],
+  "goleadores": [
+    {
+      "posicion": 1,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+      "nombre": "Lionel",
+      "apellido": "Messi",
+      "goles": 13
+    },
+    {
+      "posicion": 2,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png",
+      "nombre": "Kylian",
+      "apellido": "Mbappé",
+      "goles": 12
+    },
+    {
+      "posicion": 3,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png",
+      "nombre": "Neymar",
+      "apellido": "da Silva Santos",
+      "goles": 10
+    },
+    {
+      "posicion": 4,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Flag_of_England.svg/2560px-Flag_of_England.svg.png",
+      "nombre": "Harry",
+      "apellido": "Kane",
+      "goles": 8
+    },
+    {
+      "posicion": 5,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png",
+      "nombre": "Timo",
+      "apellido": "Werner",
+      "goles": 4
+    },
+    {
+      "posicion": 6,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1200px-Flag_of_Belgium.svg.png",
+      "nombre": "Romelu",
+      "apellido": "Lukaku",
+      "goles": 3
+    },
+    {
+      "posicion": 7,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/2560px-Flag_of_Portugal.svg.png",
+      "nombre": "Cristiano",
+      "apellido": "Ronaldo",
+      "goles": 3
+    },
+    {
+      "posicion": 8,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/2560px-Flag_of_Senegal.svg.png",
+      "nombre": "Sadio",
+      "apellido": "Mané",
+      "goles": 2
+    },
+    {
+      "posicion": 9,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png",
+      "nombre": "Robert",
+      "apellido": "Lewandowski",
+      "goles": 1
+    },
+    {
+      "posicion": 10,
+      "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/2560px-Flag_of_Uruguay.svg.png",
+      "nombre": "Luis",
+      "apellido": "Suárez",
+      "goles": 1
+    }
   ]
 }

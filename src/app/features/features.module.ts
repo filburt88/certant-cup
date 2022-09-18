@@ -11,9 +11,12 @@ import { FeaturesComponent } from './features.component';
 import { CarouselComponent } from '../components/carousel/carousel.component';
 import { MatchCardComponent } from '../components/match-card/match-card.component';
 import { CustomDatePipe } from '../core/pipes/custom-date.pipe';
+import { TableComponent } from '../components/table/table.component';
+import { RankingComponent } from './private/ranking/ranking.component';
+
 
 @NgModule({
-  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent, MatchCardComponent, CustomDatePipe],
+  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent, MatchCardComponent, CustomDatePipe, TableComponent, RankingComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,

@@ -51,5 +51,75 @@
         "golesVisitante": null
       }
     }
+  ],
+  "ranking": [
+    {
+      "posicion": 1,
+      "nombre": "Diego",
+      "apellido": "Maradona",
+      "puntos": 12
+    },
+    {
+      "posicion": 2,
+      "nombre": "Lionel",
+      "apellido": "Messi",
+      "puntos": 10
+    },
+    {
+      "posicion": 3,
+      "nombre": "Alfredo",
+      "apellido": "Di Stéfano",
+      "puntos": 8
+    },
+    {
+      "posicion": 4,
+      "nombre": "Mario",
+      "apellido": "Kempes",
+      "puntos": 7
+    },
+    {
+      "posicion": 5,
+      "nombre": "Daniel",
+      "apellido": "Passarella",
+      "puntos": 5
+    },
+    {
+      "posicion": 6,
+      "nombre": "Ubaldo",
+      "apellido": "Fillol",
+      "puntos": 4
+    },
+    {
+      "posicion": 7,
+      "nombre": "Gabriel",
+      "apellido": "Batistuta",
+      "puntos": 3
+    },
+    {
+      "posicion": 8,
+      "nombre": "Enrique",
+      "apellido": "Sívori",
+      "puntos": 2
+    },
+    {
+      "posicion": 9,
+      "nombre": "Ricardo",
+      "apellido": "Bochini",
+      "puntos": 1
+    },
+    {
+      "posicion": 10,
+      "nombre": "Claudio",
+      "apellido": "Caniggia",
+      "puntos": 0
+    }
+  ],
+  "ranking-usuario": [
+    {
+      "posicion": 19,
+      "nombre": "Franco",
+      "apellido": "Osores",
+      "puntos": 0
+    }
   ]
 }

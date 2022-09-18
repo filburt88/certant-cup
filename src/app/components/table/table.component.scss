@@ -1,0 +1,28 @@
+@import "../../../assets/styles/main.scss";
+
+table {
+  width: 100%;
+}
+
+// Material table override of table styles
+td,
+th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center !important;
+}
+// Finsih Material table override of table styles
+
+.table__footer-cell {
+  background: $secondary-color;
+  font-weight: bold;
+  color: $primary-text-dark;
+}
+
+.table__header-title {
+  font-weight: bold;
+  font-size: 14px;
+}

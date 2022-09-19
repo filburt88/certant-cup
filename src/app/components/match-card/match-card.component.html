@@ -46,7 +46,7 @@
       class="card__action-container"
       *ngIf="!match.resultadoReal.golesLocal"
     >
-      <button class="card__action-button" mat-raised-button>Apostar</button>
+      <button class="card__action-button" mat-raised-button (click)="redirectToMatch(match)">Apostar</button>
     </mat-card-actions>
   </mat-card>
 </div>

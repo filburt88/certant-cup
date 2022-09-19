@@ -18,7 +18,7 @@
       }
     },
     {
-      "idPartido": 1,
+      "idPartido": 2,
       "fase": "Grupo C",
       "estadio": "Al Bayt Stadium",
       "estado": "Apuestas Abiertas",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "idPartido": 1,
+      "idPartido": 3,
       "fase": "Grupo C",
       "estadio": "Al Bayt Stadium",
       "estado": "Apuestas Abiertas",
@@ -192,6 +192,60 @@
       "nombre": "Luis",
       "apellido": "Suárez",
       "goles": 1
+    }
+  ],
+  "apostar": [
+    {
+      "partido": {
+        "idPartido": 4,
+        "fase": "Grupo H",
+        "estadio": "Al Bayt Stadium",
+        "estado": "Apuestas Abiertas",
+        "fecha": "2022-09-19T03:14:38.945Z",
+        "resultadoReal": {
+          "idLocal": 1,
+          "nombreLocal": "Argentina",
+          "fotoLocal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+          "golesLocal": null,
+          "idVisitante": 2,
+          "nombreVisitante": "Arabia Saudita",
+          "fotoVisitante": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Saudi_Arabia_%28type_2%29.svg",
+          "golesVisitante": null
+        }
+      },
+      "resultadoUsuario": {
+        "goles": {
+          "golesLocal": 2,
+          "golesVisitante": 0
+        },
+        "resultado": "Ganador Local"
+      }
+    },
+    {
+      "partido": {
+        "idPartido": 5,
+        "fase": "Grupo H",
+        "estadio": "Al Bayt Stadium",
+        "estado": "Apuestas Abiertas",
+        "fecha": "2022-09-19T03:14:38.945Z",
+        "resultadoReal": {
+          "idLocal": 1,
+          "nombreLocal": "Argentina",
+          "fotoLocal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+          "golesLocal": null,
+          "idVisitante": 2,
+          "nombreVisitante": "Arabia Saudita",
+          "fotoVisitante": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Saudi_Arabia_%28type_2%29.svg",
+          "golesVisitante": null
+        }
+      },
+      "resultadoUsuario": {
+        "goles": {
+          "golesLocal": 2,
+          "golesVisitante": 0
+        },
+        "resultado": "Ganador Local"
+      }
     }
   ]
 }

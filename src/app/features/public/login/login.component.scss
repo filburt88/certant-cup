@@ -1,0 +1,50 @@
+@import "../../../../assets/styles/main.scss";
+
+/*Mobile background view*/
+.login-form__container {
+  height: 60vh;
+  width: 100vw;
+  background-image: url("../../../../assets/images/login-hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .login-form__container {
+    background-image: url("../../../../assets/images/desktop-login-back.png");
+    background-position: top;
+  }
+}
+
+.login-form__selection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: fixed;
+  bottom: 0;
+
+  background: $white-color;
+  border-radius: 25px 25px 0px 0px;
+  padding: 25px 0px;
+}
+
+.login-form__selection-text {
+  text-align: center;
+  padding: 25px;
+}
+
+.login-form__selection-button {
+  background: $secondary-color;
+  color: $primary-text;
+
+  width: 100px;
+  margin: auto 20px;
+}
+
+.login-form__logo {
+  height: 100px;
+  width: auto;
+}

@@ -6,8 +6,10 @@ import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.compone
 import { HomeComponent } from './private/home/home.component';
 import { RankingComponent } from './private/ranking/ranking.component';
 import { TopScorersComponent } from './private/top-scorers/top-scorers.component';
+import { LoginComponent } from './public/login/login.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: FeaturesComponent,

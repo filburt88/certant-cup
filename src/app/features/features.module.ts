@@ -19,17 +19,34 @@ import { ScorersTableComponent } from '../components/scorers-table/scorers-table
 import { TopScorersComponent } from './private/top-scorers/top-scorers.component';
 import { BetMatchComponent } from '../components/bet-match/bet-match.component';
 import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.component';
-
-
+import { LoginFormComponent } from '../components/login-form/login-form.component';
+import { LoginComponent } from './public/login/login.component';
 
 @NgModule({
-  declarations: [FeaturesComponent, SidenavComponent, HomeComponent, CarouselComponent, MatchCardComponent, CustomDatePipe, TableComponent, RankingComponent, SectionHeaderComponent, ScorersTableComponent, TopScorersComponent, BetMatchComponent, BetByMatchComponent],
+  declarations: [
+    FeaturesComponent,
+    SidenavComponent,
+    HomeComponent,
+    MatchCardComponent,
+    CustomDatePipe,
+    TableComponent,
+    RankingComponent,
+    SectionHeaderComponent,
+    ScorersTableComponent,
+    TopScorersComponent,
+    BetMatchComponent,
+    BetByMatchComponent,
+    LoginFormComponent,
+    LoginComponent,
+    CarouselComponent,
+  ],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
     MaterialModule,
     NgbootstrapModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
+  exports: [],
 })
 export class FeaturesModule {}

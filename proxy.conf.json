@@ -1,0 +1,6 @@
+{
+  "/fixture": {
+    "target": "http://workstation03:8060/",
+    "secure": false
+  }
+}

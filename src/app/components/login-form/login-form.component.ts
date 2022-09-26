@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })
+
 export class LoginFormComponent implements OnInit {
   form!: FormGroup;
 

@@ -38,13 +38,18 @@ $certant-cup-theme: mat.define-light-theme(
 
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
-@import './assets/styles/main.scss';
+@import "./assets/styles/main.scss";
 
 html,
 body {
   margin: 0;
 }
 
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+// Global modal styles
+mat-dialog-container {
+  background-color: $white-color !important;
 }

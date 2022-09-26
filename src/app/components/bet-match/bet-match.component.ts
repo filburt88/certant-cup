@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BetMatch } from 'src/app/core/models/BetMatch';
+import { BetService } from 'src/app/core/services/bet.service';
 import { MatchService } from 'src/app/core/services/match.service';
 
 @Component({
@@ -10,6 +11,13 @@ import { MatchService } from 'src/app/core/services/match.service';
   styleUrls: ['./bet-match.component.scss'],
 })
 export class BetMatchComponent implements OnInit {
+  //   {
+  //     "idPartido":12,
+  //     "goles": {
+  //         "golesLocal":3,
+  //         "golesVisitante":3
+  //     }
+  // }
   form: FormGroup = this.fb.group({
     golesLocal: [0, [Validators.required, Validators.max(31)]],
     golesVisitante: [0, Validators.required],
@@ -22,7 +30,8 @@ export class BetMatchComponent implements OnInit {
     private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private matchService: MatchService,
-    private router: Router
+    private router: Router,
+    private betService: BetService
   ) {}
 
   ngOnInit(): void {
@@ -41,6 +50,18 @@ export class BetMatchComponent implements OnInit {
         }
         this.getGolesLocal();
         this.getGolesVisitante();
+      },
+    });
+  }
+
+  submitBet() {
+    let bet = {
+      idPartido: this.match.partido.idPartido,
+      goles: this.form.value,
+    };
+    this.betService.postBet(bet).subscribe({
+      next: (res) => {
+        console.log(res);
       },
     });
   }

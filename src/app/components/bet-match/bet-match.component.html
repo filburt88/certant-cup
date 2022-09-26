@@ -58,7 +58,9 @@
       </div>
     </div>
     <div class="match-bet__button-container">
-      <button class="match-bet__button" mat-raised-button>Apostar</button>
+      <button class="match-bet__button" (click)="submitBet()" mat-raised-button>
+        Apostar
+      </button>
     </div>
   </form>
   <div class="match-bet__info">

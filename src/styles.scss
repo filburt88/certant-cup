@@ -53,3 +53,22 @@ body {
 mat-dialog-container {
   background-color: $white-color !important;
 }
+
+//Global SnackBar Styles
+.success-snackbar {
+  background-color: $success-alert;
+  color: $primary-text !important;
+  border: none;
+  .mat-simple-snackbar-action {
+    color: $accent-text;
+  }
+}
+
+.error-snackbar {
+  background-color: $error-alert;
+  color: $primary-text !important;
+  border: none;
+  .mat-simple-snackbar-action {
+    color: $primary-text;
+  }
+}

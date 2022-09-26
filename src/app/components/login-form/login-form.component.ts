@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { ToastsService } from 'src/app/core/services/toasts.service';
 
 @Component({
   selector: 'app-login-form',
@@ -10,7 +11,11 @@ import { AuthService } from 'src/app/core/services/auth.service';
 export class LoginFormComponent implements OnInit {
   form!: FormGroup;
 
-  constructor(private fb: FormBuilder, private authServ: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private authServ: AuthService,
+    private toast: ToastsService
+  ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -19,14 +24,13 @@ export class LoginFormComponent implements OnInit {
     });
   }
 
-  test() {
-    console.log(this.form.value);
-  }
-
   login() {
     this.authServ.login(this.form.value).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
+        this.toast.successSnackBar('Bienvenido', 'Ok');
+      },
+      error: () => {
+        this.toast.errorSnackBar('Hubo un error en el login', 'Ok');
       },
     });
   }

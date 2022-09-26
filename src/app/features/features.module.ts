@@ -38,7 +38,7 @@ import { LoginComponent } from './public/login/login.component';
     BetByMatchComponent,
     LoginFormComponent,
     LoginComponent,
-    CarouselComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

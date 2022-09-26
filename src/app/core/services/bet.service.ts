@@ -10,7 +10,9 @@ export class BetService {
 
   constructor(private http:HttpClient) { }
 
-  getBetById(id:number):Observable<Bet>{
-    return this.http.get<Bet>('http://localhost:3000/apostar/')
+  getBet(betId: string): Observable<any> {
+    return this.http.get<any>('fixture/apostar?idPartido=' + betId, {
+      withCredentials: true,
+    });
   }
 }

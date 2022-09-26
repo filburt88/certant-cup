@@ -18,8 +18,14 @@
             <mat-label class="match-bet__match-vs-team-input-label"
               >Local</mat-label
             >
-            <input formControlName="golesLocal" type="number" matInput min="0" max="31" />
-            <mat-error>El número máximo de goles es 31</mat-error>
+            <input
+              formControlName="golesLocal"
+              type="number"
+              matInput
+              min="0"
+              max="31"
+            />
+            <mat-error>{{ getErrorLocal() }}</mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -39,8 +45,14 @@
             appearance="fill"
           >
             <mat-label>Visitante</mat-label>
-            <input formControlName="golesVisitante" type="number" matInput min="0" max="31" />
-            <mat-error>El número máximo de goles es 31</mat-error>
+            <input
+              formControlName="golesVisitante"
+              type="number"
+              matInput
+              min="0"
+              max="31"
+            />
+            <mat-error>{{ getErrorVisitante() }}</mat-error>
           </mat-form-field>
         </div>
       </div>

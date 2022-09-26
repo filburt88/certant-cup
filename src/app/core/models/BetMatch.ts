@@ -22,5 +22,5 @@ export interface BetMatch {
       golesVisitante: number;
     };
     resultado: string;
-  };
+  } | null;
 }

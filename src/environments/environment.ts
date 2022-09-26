@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: ''
+  loginServiceUrl: '/fixture/login-usuario',
+  homeMtachServiceUrl: '/fixture/partidos',
+  getMatchBetById: 'fixture/apostar?idPartido='
 };
 
 /*

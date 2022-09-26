@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { AuthUser } from '../models/AuthUser';
 
 @Injectable({
   providedIn: 'root',
@@ -8,17 +10,10 @@ import { Observable } from 'rxjs';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  // headers = new HttpHeaders({
-  //   'Access-Control-Allow-Origin': '*',
-  //   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-  //   'Access-Control-Allow-Headers':
-  //     'X-Requested-With, content-type, Authorization',
-  //   Accept: 'application/json',
-  //   observe: 'response',
-  // });
+  url: string = environment.loginServiceUrl;
 
-  login(user: any): Observable<any> {
-    return this.http.post('/fixture/login-usuario', user, {
+  login(user: AuthUser): Observable<any> {
+    return this.http.post(environment.loginServiceUrl, user, {
       withCredentials: true,
     });
   }

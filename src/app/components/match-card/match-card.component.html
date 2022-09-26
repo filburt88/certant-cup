@@ -19,34 +19,52 @@
       <div class="card__match-container-team">
         <img
           class="card__match-container-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/2560px-Flag_of_Argentina.svg.png"
+          src="{{ match.resultadoReal.fotoLocal }}"
           alt="Bandera Equipo Local"
         />
         <div class="card__match-container-team-name">
           {{ match.resultadoReal.nombreLocal }}
+        </div>
+        <div
+          *ngIf="match.resultadoReal.golesLocal != null"
+          class="card__match-container-team-result"
+        >
+          {{ match.resultadoReal.golesLocal }}
         </div>
       </div>
       <div>vs</div>
       <div class="card__match-container-team">
         <img
           class="card__match-container-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
+          src="{{ match.resultadoReal.fotoVisitante }}"
           alt="Bandera Equipo Local"
         />
         <div class="card__match-container-team-name">
           {{ match.resultadoReal.nombreVisitante }}
         </div>
+        <div
+          *ngIf="match.resultadoReal.golesVisitante != null"
+          class="card__match-container-team-result"
+        >
+          {{ match.resultadoReal.golesVisitante }}
+        </div>
       </div>
     </div>
     <mat-card-content class="card__info-container">
       <div class="card__date">{{ match.fecha | date: "dd/MM/yy HH:mm" }}</div>
-      <div class="card__status">{{ match.estado }}</div>
+      <div class="card__status">Estado de las apuestas: {{ match.estado }}</div>
     </mat-card-content>
     <mat-card-actions
       class="card__action-container"
-      *ngIf="!match.resultadoReal.golesLocal"
+      *ngIf="match.estado === 'Abierta'"
     >
-      <button class="card__action-button" mat-raised-button (click)="redirectToMatch(match)">Apostar</button>
+      <button
+        class="card__action-button"
+        mat-raised-button
+        (click)="redirectToMatch(match)"
+      >
+        Apostar
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>

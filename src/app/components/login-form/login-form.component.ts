@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ToastsService } from 'src/app/core/services/toasts.service';
 
@@ -14,19 +15,21 @@ export class LoginFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private authServ: AuthService,
-    private toast: ToastsService
+    private toast: ToastsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      username: '',
-      contrasenia: '',
+      username: ['', Validators.required],
+      contrasenia: ['', Validators.required],
     });
   }
 
-  login() {
+  login(): void {
     this.authServ.login(this.form.value).subscribe({
       next: () => {
+        this.router.navigate(['home']);
         this.toast.successSnackBar('Bienvenido', 'Ok');
       },
       error: () => {

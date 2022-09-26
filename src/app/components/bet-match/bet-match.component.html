@@ -1,30 +1,25 @@
-<div class="match-bet__container">
-  <form [formGroup]="bet" autocomplete="off">
+<div class="match-bet__container" *ngIf="match">
+  <form autocomplete="off" [formGroup]="form">
     <div class="match-bet__match-vs">
       <div class="match-bet__match-vs-team">
         <img
           class="match-bet__match-vs-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
+          src="{{ match.partido.resultadoReal.fotoLocal }}"
           alt="Bandera Equipo Local"
         />
-        <div class="match-bet__match-vs-team-name">Argentina</div>
+        <div class="match-bet__match-vs-team-name">
+          {{ match.partido.resultadoReal.nombreLocal }}
+        </div>
         <div class="match-bet__match-vs-team-input">
           <mat-form-field
-            formGroupName="goles"
             class="match-bet__match-vs-team-input-field"
             appearance="fill"
           >
             <mat-label class="match-bet__match-vs-team-input-label"
               >Local</mat-label
             >
-            <input
-              type="number"
-              matInput
-              min="0"
-              max="31"
-              formControlName="golesLocal"
-            />
-            <mat-error> Please enter a valid email address </mat-error>
+            <input formControlName="golesLocal" type="number" matInput min="0" max="31" />
+            <mat-error>El número máximo de goles es 31</mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -32,37 +27,32 @@
       <div class="match-bet__match-vs-team">
         <img
           class="match-bet__match-vs-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Saudi_Arabia_%28type_1%29.svg"
+          src="{{ match.partido.resultadoReal.fotoVisitante }}"
           alt="Bandera Equipo Visitante"
         />
-        <div class="match-bet__match-vs-team-name">Arabia Saudita</div>
+        <div class="match-bet__match-vs-team-name">
+          {{ match.partido.resultadoReal.nombreVisitante }}
+        </div>
         <div class="match-bet__match-vs-team-input">
           <mat-form-field
-            formGroupName="goles"
             class="match-bet__match-vs-team-input-field"
             appearance="fill"
           >
             <mat-label>Visitante</mat-label>
-            <input
-              type="number"
-              matInput
-              min="0"
-              max="31"
-              formControlName="golesVisitante"
-            />
-            <mat-error> Please enter a valid email address </mat-error>
+            <input formControlName="golesVisitante" type="number" matInput min="0" max="31" />
+            <mat-error>El número máximo de goles es 31</mat-error>
           </mat-form-field>
         </div>
       </div>
     </div>
     <div class="match-bet__button-container">
-      <button class="match-bet__button" (click)="submit()" mat-raised-button>
-        Apostar
-      </button>
+      <button class="match-bet__button" mat-raised-button>Apostar</button>
     </div>
   </form>
   <div class="match-bet__info">
-    <div class="match-bet__info-stadium">Al Bayt Stadium</div>
-    <div class="match-bet__info-date">16/11/22 14:00</div>
+    <div class="match-bet__info-stadium">{{ match.partido.estadio }}</div>
+    <div class="match-bet__info-date">
+      {{ match.partido.fecha | date: "dd/MM/yy HH:mm" }}
+    </div>
   </div>
 </div>

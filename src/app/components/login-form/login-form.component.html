@@ -1,14 +1,28 @@
 <form [formGroup]="form" class="login-fom__container">
-  <img class="login-form__image-header" src="../../../assets/logo/CERTANT.svg" alt="certant-logo">
+  <img
+    class="login-form__image-header"
+    src="../../../assets/logo/CERTANT.svg"
+    alt="certant-logo"
+  />
   <mat-form-field appearance="fill">
     <mat-label>Usuario</mat-label>
-    <input matInput type="text" formControlName='username'/>
+    <input matInput type="text" formControlName="username" />
+    <mat-error>Nombre de usuario requerido</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Contraseña</mat-label>
-    <input matInput type="password" formControlName='contrasenia'/>
+    <input matInput type="password" formControlName="contrasenia" />
+    <mat-error>Contraseña Requerida</mat-error>
   </mat-form-field>
 
-  <button class="login-form__button" mat-raised-button (click)="login()">Ingresar</button>
+  <button
+    class="login-form__button"
+    mat-raised-button
+    mat-dialog-close
+    [disabled]="form.invalid"
+    (click)="login()"
+  >
+    Ingresar
+  </button>
 </form>

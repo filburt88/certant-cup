@@ -2,17 +2,18 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { HomeMatch } from '../models/HomeMatch';
+import { BetMatch } from '../models/BetMatch';
 
 @Injectable({
   providedIn: 'root',
 })
-export class HomeMatchService {
-  url: string = environment.homeMtachServiceUrl;
-
+export class MatchService {
   constructor(private http: HttpClient) {}
+  url: string = environment.getMatchBetById;
 
-  getHomeMatch(): Observable<HomeMatch[]> {
-    return this.http.get<HomeMatch[]>(this.url, { withCredentials: true });
+  getMatch(matchId: string): Observable<BetMatch> {
+    return this.http.get<BetMatch>(this.url + matchId, {
+      withCredentials: true,
+    });
   }
 }

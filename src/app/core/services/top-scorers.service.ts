@@ -10,6 +10,6 @@ export class TopScorersService {
   constructor(private http: HttpClient) {}
 
   getScorers(): Observable<Player[]> {
-    return this.http.get<Player[]>('http://localhost:3000/goleadores/');
+    return this.http.get<Player[]>('fixture/goleadores/');
   }
 }

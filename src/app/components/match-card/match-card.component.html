@@ -3,6 +3,7 @@
     <mat-card-header class="card__header">
       <div mat-card-avatar class="card__header-image-container">
         <img
+          onerror="src='../../../assets/images/fallback.png'"
           class="card__header-image"
           src="../../../assets/wcLogo/WC-logo.svg"
           alt="wc logo"
@@ -18,6 +19,7 @@
     <div class="card__match-container">
       <div class="card__match-container-team">
         <img
+          onerror="src='../../../assets/images/fallback.png'"
           class="card__match-container-team-flag"
           src="{{ match.resultadoReal.fotoLocal }}"
           alt="Bandera Equipo Local"
@@ -35,6 +37,7 @@
       <div>vs</div>
       <div class="card__match-container-team">
         <img
+          onerror="src='../../../assets/images/fallback.png'"
           class="card__match-container-team-flag"
           src="{{ match.resultadoReal.fotoVisitante }}"
           alt="Bandera Equipo Local"

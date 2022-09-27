@@ -20,6 +20,7 @@ export class ScorersTableComponent implements OnInit {
   getTableData() {
     this.topScorersService.getScorers().subscribe({
       next: (res) => {
+        console.log(res)
         this.ranking = res;
       },
     });

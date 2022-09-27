@@ -3,6 +3,7 @@
     <div class="match-bet__match-vs">
       <div class="match-bet__match-vs-team">
         <img
+        onerror="src='../../../assets/images/fallback.png'"
           class="match-bet__match-vs-team-flag"
           src="{{ match.partido.resultadoReal.fotoLocal }}"
           alt="Bandera Equipo Local"
@@ -32,6 +33,7 @@
       <div class="match-bet__match-vs-text">vs</div>
       <div class="match-bet__match-vs-team">
         <img
+        onerror="src='../../../assets/images/fallback.png'"
           class="match-bet__match-vs-team-flag"
           src="{{ match.partido.resultadoReal.fotoVisitante }}"
           alt="Bandera Equipo Visitante"

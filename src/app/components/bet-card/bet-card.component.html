@@ -67,6 +67,7 @@
       <div [ngSwitch]="bet.resultadoUsuario?.resultadoCheck">
         <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 0">
           <img
+            onerror="src='../../../assets/images/fallback.png'"
             class="bet-card__results-icon"
             src="../../../assets/icons/football.svg"
             alt="Resultado icon"
@@ -91,6 +92,7 @@
         </div>
         <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 2">
           <img
+            onerror="src='../../../assets/images/fallback.png'"
             class="bet-card__results-icon"
             src="../../../assets/icons/flame.svg"
             alt="Resultado icon"

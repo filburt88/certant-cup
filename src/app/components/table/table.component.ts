@@ -11,7 +11,7 @@ export class TableComponent implements OnInit {
   displayedColumns = ['position', 'name', 'lastName', 'points'];
   ranking: User[] = [];
   myRanking: User = {
-    posicion: 9999,
+    posicion: 999,
     nombre: 'Nombre',
     apellido: 'Apellido',
     puntos: 0,

@@ -1,33 +1,56 @@
-<div class="bet-card">
-  <div class="bet-card__header">
-    <img
-      class="bet-card__header-image"
-      src="../../../assets/wcLogo/WC-logo.svg"
-      alt="Certant cup logo"
-    />
-    <div class="bet-card__header-phase">Fase de Grupos</div>
-  </div>
-  <div class="bet-card__content">
-    <div class="bet-card__content-match">
-      <div class="bet-card__content-match-team">
-        <img
-          class="bet-card__content-match-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Flag_of_Ethiopia_%281996%E2%80%932009%29.svg/360px-Flag_of_Ethiopia_%281996%E2%80%932009%29.svg.png"
-          alt="local team flag"
-        />
-        <div class="bet-card__content-match-team-name">Etiopia</div>
-      </div>
-      <div>vs</div>
-      <div class="bet-card__content-match-team">
-        <img
-          class="bet-card__content-match-team-flag"
-          src="https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg"
-          alt="visit team flag"
-        />
-        <div class="bet-card__content-match-team-name">Etiopia</div>
+<form autocomplete="off">
+  <div class="bet-card">
+    <div class="bet-card__header">
+      <img
+        class="bet-card__header-image"
+        src="../../../assets/wcLogo/WC-logo.svg"
+        alt="Certant cup logo"
+      />
+      <div class="bet-card__header-info"> <span class="bet-card__header-info-phase">Fase de Grupos</span> <span class="bet-card__header-info-date">16/11/22 14:00</span> </div>
+    </div>
+    <div class="bet-card__content">
+      <div class="bet-card__content-match">
+        <div class="bet-card__content-match-team">
+          <img
+            class="bet-card__content-match-team-flag"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Flag_of_Ethiopia_%281996%E2%80%932009%29.svg/360px-Flag_of_Ethiopia_%281996%E2%80%932009%29.svg.png"
+            alt="local team flag"
+          />
+          <div class="bet-card__content-match-team-name">Etiopia</div>
+          <mat-form-field class="bet-card__content-match-team-form-field">
+            <input matInput type="number" />
+          </mat-form-field>
+        </div>
+        <div>vs</div>
+        <div class="bet-card__content-match-team">
+          <img
+            class="bet-card__content-match-team-flag"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg"
+            alt="visit team flag"
+          />
+          <div class="bet-card__content-match-team-name">Paises bajos</div>
+          <mat-form-field class="bet-card__content-match-team-form-field">
+            <input matInput type="number" />
+            <mat-error>El numero maximo es 31 goles</mat-error>
+          </mat-form-field>
+        </div>
       </div>
     </div>
-    <div class="TU APUESTA A LA DERECHA">MI APUESTA</div>
+    <div class="bet-card__results" *ngIf="test; else templateName">
+      <div class="bet-card__results-title">Resultado</div>
+      <div><span>3</span>-<span>0</span></div>
+      <div>
+        <img
+          class="bet-card__results-icon"
+          src="../../../assets/icons/tick.svg"
+          alt="Resultado icon"
+        />
+        <span>Acertaste</span>
+      </div>
+    </div>
   </div>
-  <div class="bet-card__results">RESULTADO ACERTASTE?</div>
-</div>
+</form>
+
+<ng-template #templateName>
+    <button class="bet-card__results-button" mat-raised-button >Apostar</button>
+</ng-template>

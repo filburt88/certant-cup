@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bet-card.component.scss']
 })
 export class BetCardComponent implements OnInit {
+  test = true
 
   constructor() { }
 

@@ -10,10 +10,10 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/ranking/');
+    return this.http.get<User[]>('fixture/ranking?pagina=1&cantidad=10');
   }
 
-  getMyRanking(): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/ranking-usuario/');
+  getMyRanking(): Observable<User> {
+    return this.http.get<User>('fixture/ranking-usuario/');
   }
 }

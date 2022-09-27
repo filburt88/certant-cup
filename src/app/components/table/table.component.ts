@@ -11,7 +11,7 @@ export class TableComponent implements OnInit {
   displayedColumns = ['position', 'name', 'lastName', 'points'];
   ranking: User[] = [];
   myRanking: User = {
-    posicion: 999,
+    posicion: 9999,
     nombre: 'Nombre',
     apellido: 'Apellido',
     puntos: 0,
@@ -32,7 +32,8 @@ export class TableComponent implements OnInit {
 
     this.UserService.getMyRanking().subscribe({
       next: (res) => {
-        this.myRanking = res[0];
+        console.log(res);
+        this.myRanking = res;
       },
     });
   }

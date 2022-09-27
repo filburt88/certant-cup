@@ -1,0 +1,44 @@
+@import "../../../assets/styles/main.scss";
+
+.bet-card {
+  background: $white-color;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bet-card__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bet-card__header-image {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.bet-card__header-phase {
+  font-weight: bold;
+  color: $primary-text-dark;
+}
+
+.bet-card__content-match {
+  display: flex;
+  align-items: center;
+}
+
+.bet-card__content-match-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bet-card__content-match-team-flag {
+  height: 60px;
+  width: 85px;
+}

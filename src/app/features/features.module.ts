@@ -21,6 +21,8 @@ import { BetMatchComponent } from '../components/bet-match/bet-match.component';
 import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.component';
 import { LoginFormComponent } from '../components/login-form/login-form.component';
 import { LoginComponent } from './public/login/login.component';
+import { BetCardComponent } from '../components/bet-card/bet-card.component';
+import { MyBetsComponent } from './private/my-bets/my-bets.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { LoginComponent } from './public/login/login.component';
     BetByMatchComponent,
     LoginFormComponent,
     LoginComponent,
-    CarouselComponent
+    CarouselComponent,
+    BetCardComponent,
+    MyBetsComponent
   ],
   imports: [
     CommonModule,

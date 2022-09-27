@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BetMatch } from 'src/app/core/models/BetMatch';
 import { BetService } from 'src/app/core/services/bet.service';
 import { MatchService } from 'src/app/core/services/match.service';
+import { ToastsService } from 'src/app/core/services/toasts.service';
 
 @Component({
   selector: 'app-bet-match',
@@ -31,7 +32,8 @@ export class BetMatchComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private matchService: MatchService,
     private router: Router,
-    private betService: BetService
+    private betService: BetService,
+    private toast: ToastsService
   ) {}
 
   ngOnInit(): void {
@@ -60,8 +62,11 @@ export class BetMatchComponent implements OnInit {
       goles: this.form.value,
     };
     this.betService.postBet(bet).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
+        this.toast.successSnackBar('Apuesta guardada correctamente', 'Ok');
+      },
+      error: () => {
+        this.toast.errorSnackBar('Hubo un error al procesar tu apuesta', 'Ok');
       },
     });
   }

@@ -7,7 +7,9 @@
         alt="certant logo"
       />
       <div *ngFor="let link of links">
-        <a [routerLink]="link">{{ link | uppercase }}</a>
+        <a (click)="drawer.toggle()" [routerLink]="link">{{
+          link | uppercase
+        }}</a>
       </div>
     </div>
   </mat-drawer>
@@ -30,7 +32,10 @@
         <mat-icon class="sidenav__top-nav-icon">menu</mat-icon>
       </button>
       <div class="sidenav__top-nav-container-links">
-        <div class="sidenav__top-nav-container-links-link" *ngFor="let link of links">
+        <div
+          class="sidenav__top-nav-container-links-link"
+          *ngFor="let link of links"
+        >
           <a [routerLink]="link">{{ link | uppercase }}</a>
         </div>
       </div>

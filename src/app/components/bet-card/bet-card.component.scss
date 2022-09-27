@@ -11,6 +11,13 @@
   min-width: 300px;
   min-height: 350px;
   margin-bottom: 20px;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .bet-card {
+    margin: 20px;
+  }
 }
 
 .bet-card__header {
@@ -91,7 +98,6 @@
   margin-bottom: 15px;
 }
 
-
-.bet-card__content-match-team-form-field__input{
+.bet-card__content-match-team-form-field__input {
   text-align: center;
 }

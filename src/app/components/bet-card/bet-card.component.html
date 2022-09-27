@@ -65,6 +65,14 @@
         >-<span>{{ bet.partido.resultadoReal.golesVisitante }}</span>
       </div>
       <div [ngSwitch]="bet.resultadoUsuario?.resultadoCheck">
+        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 0">
+          <img
+            class="bet-card__results-icon"
+            src="../../../assets/icons/football.svg"
+            alt="Resultado icon"
+          />
+          <span>El partido se está jugando</span>
+        </div>
         <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 1">
           <img
             class="bet-card__results-icon"

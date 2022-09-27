@@ -1,4 +1,5 @@
-<form autocomplete="off">
+{{ bet.resultadoUsuario!.goles.golesLocal }}
+<form autocomplete="off" [formGroup]="form">
   <div class="bet-card">
     <div class="bet-card__header">
       <img
@@ -6,51 +7,91 @@
         src="../../../assets/wcLogo/WC-logo.svg"
         alt="Certant cup logo"
       />
-      <div class="bet-card__header-info"> <span class="bet-card__header-info-phase">Fase de Grupos</span> <span class="bet-card__header-info-date">16/11/22 14:00</span> </div>
+      <div class="bet-card__header-info">
+        <span class="bet-card__header-info-phase">{{ bet.partido.fase }}</span>
+        <span class="bet-card__header-info-date">{{
+          bet.partido.fecha | date: "dd/MM/yy HH:mm"
+        }}</span>
+      </div>
     </div>
     <div class="bet-card__content">
       <div class="bet-card__content-match">
         <div class="bet-card__content-match-team">
           <img
             class="bet-card__content-match-team-flag"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Flag_of_Ethiopia_%281996%E2%80%932009%29.svg/360px-Flag_of_Ethiopia_%281996%E2%80%932009%29.svg.png"
+            src="{{ bet.partido.resultadoReal.fotoLocal }}"
             alt="local team flag"
           />
-          <div class="bet-card__content-match-team-name">Etiopia</div>
+          <div class="bet-card__content-match-team-name">
+            {{ bet.partido.resultadoReal.nombreLocal }}
+          </div>
           <mat-form-field class="bet-card__content-match-team-form-field">
-            <input matInput type="number" />
+            <input
+              class="bet-card__content-match-team-form-field__input"
+              matInput
+              type="number"
+              formControlName="golesLocal"
+            />
           </mat-form-field>
         </div>
         <div>vs</div>
         <div class="bet-card__content-match-team">
           <img
             class="bet-card__content-match-team-flag"
-            src="https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg"
+            src="{{ bet.partido.resultadoReal.fotoVisitante }}"
             alt="visit team flag"
           />
-          <div class="bet-card__content-match-team-name">Paises bajos</div>
+          <div class="bet-card__content-match-team-name">
+            {{ bet.partido.resultadoReal.nombreVisitante }}
+          </div>
           <mat-form-field class="bet-card__content-match-team-form-field">
-            <input matInput type="number" />
+            <input
+              class="bet-card__content-match-team-form-field__input"
+              matInput
+              type="number"
+              formControlName="golesVisitante"
+            />
             <mat-error>El numero maximo es 31 goles</mat-error>
           </mat-form-field>
         </div>
       </div>
     </div>
-    <div class="bet-card__results" *ngIf="test; else templateName">
+    <div class="bet-card__results" *ngIf="isMatchFinished(); else templateName">
       <div class="bet-card__results-title">Resultado</div>
-      <div><span>3</span>-<span>0</span></div>
       <div>
-        <img
-          class="bet-card__results-icon"
-          src="../../../assets/icons/tick.svg"
-          alt="Resultado icon"
-        />
-        <span>Acertaste</span>
+        <span>{{ bet.partido.resultadoReal.golesLocal }}</span
+        >-<span>{{ bet.partido.resultadoReal.golesVisitante }}</span>
+      </div>
+      <div [ngSwitch]="bet.resultadoUsuario?.resultadoCheck">
+        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 1">
+          <img
+            class="bet-card__results-icon"
+            src="../../../assets/icons/cross.svg"
+            alt="Resultado icon"
+          />
+          <span>Fallaste</span>
+        </div>
+        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 2">
+          <img
+            class="bet-card__results-icon"
+            src="../../../assets/icons/tick.svg"
+            alt="Resultado icon"
+          />
+          <span>Acertaste el ganador</span>
+        </div>
+        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 2">
+          <img
+            class="bet-card__results-icon"
+            src="../../../assets/icons/flame.svg"
+            alt="Resultado icon"
+          />
+          <span>Acertaste un pleno!</span>
+        </div>
       </div>
     </div>
   </div>
 </form>
 
 <ng-template #templateName>
-    <button class="bet-card__results-button" mat-raised-button >Apostar</button>
+  <button class="bet-card__results-button" mat-raised-button>Apostar</button>
 </ng-template>

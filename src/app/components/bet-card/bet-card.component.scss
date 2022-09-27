@@ -9,6 +9,7 @@
   justify-content: center;
 
   min-width: 300px;
+  margin-bottom: 20px;
 }
 
 .bet-card__header {
@@ -29,7 +30,7 @@
   color: $primary-text-dark;
   display: flex;
   flex-direction: column;
-  &-date{
+  &-date {
     font-size: 12px;
     color: $secondary-text-grey;
   }
@@ -76,7 +77,7 @@
 }
 
 .bet-card__results-icon {
-  height: 30px;
+  height: 25px;
   width: auto;
   margin-right: 5px;
 }
@@ -87,4 +88,9 @@
   color: $primary-text;
   align-self: center;
   margin-bottom: 15px;
+}
+
+
+.bet-card__content-match-team-form-field__input{
+  text-align: center;
 }

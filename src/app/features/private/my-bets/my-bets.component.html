@@ -1,3 +1,7 @@
+<app-section-header title="Mis Apuestas"></app-section-header>
 <div class="my-bets__container">
-  <app-bet-card></app-bet-card>
+  <div *ngFor="let bet of bets">
+    <app-bet-card [bet]="bet"></app-bet-card>
+  </div>
+  
 </div>

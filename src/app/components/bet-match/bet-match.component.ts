@@ -12,16 +12,9 @@ import { ToastsService } from 'src/app/core/services/toasts.service';
   styleUrls: ['./bet-match.component.scss'],
 })
 export class BetMatchComponent implements OnInit {
-  //   {
-  //     "idPartido":12,
-  //     "goles": {
-  //         "golesLocal":3,
-  //         "golesVisitante":3
-  //     }
-  // }
   form: FormGroup = this.fb.group({
     golesLocal: [0, [Validators.required, Validators.max(31)]],
-    golesVisitante: [0, Validators.required],
+    golesVisitante: [0, [Validators.required, Validators.max(31)]],
   });
 
   matchId: number = 0;

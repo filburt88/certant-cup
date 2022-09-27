@@ -21,4 +21,10 @@ export class BetService {
       withCredentials: true,
     });
   }
+
+  getAllBets(): Observable<any> {
+    return this.http.get<any>('fixture/apuestas', {
+      withCredentials: true,
+    });
+  }
 }

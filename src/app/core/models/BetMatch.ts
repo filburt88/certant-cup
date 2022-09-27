@@ -21,6 +21,7 @@ export interface BetMatch {
       golesLocal: number;
       golesVisitante: number;
     };
-    resultado: string;
+    resultado?: string;
+    resultadoCheck?: number;
   } | null;
 }

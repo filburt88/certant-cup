@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BetMatchComponent } from '../components/bet-match/bet-match.component';
-import { JackpotScorerComponent } from '../components/jackpot-form/jackpot-scorer.component';
+import { JackpotScorerComponent } from '../components/jackpot-scorer/jackpot-scorer.component';
+
 import { FeaturesComponent } from './features.component';
 import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.component';
 import { HomeComponent } from './private/home/home.component';

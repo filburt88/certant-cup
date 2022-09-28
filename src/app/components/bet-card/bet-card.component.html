@@ -65,7 +65,7 @@
         >-<span>{{ bet.partido.resultadoReal.golesVisitante }}</span>
       </div>
       <div [ngSwitch]="bet.resultadoUsuario?.resultadoCheck">
-        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 0">
+        <div *ngSwitchCase="0">
           <img
             onerror="src='../../../assets/images/fallback.png'"
             class="bet-card__results-icon"
@@ -74,7 +74,7 @@
           />
           <span>El partido se está jugando</span>
         </div>
-        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 1">
+        <div *ngSwitchCase="1">
           <img
             class="bet-card__results-icon"
             src="../../../assets/icons/cross.svg"
@@ -82,7 +82,7 @@
           />
           <span>Fallaste</span>
         </div>
-        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 2">
+        <div *ngSwitchCase="2">
           <img
             class="bet-card__results-icon"
             src="../../../assets/icons/tick.svg"
@@ -90,7 +90,7 @@
           />
           <span>Acertaste el ganador</span>
         </div>
-        <div *ngSwitchCase="bet.resultadoUsuario?.resultadoCheck === 2">
+        <div *ngSwitchCase="3">
           <img
             onerror="src='../../../assets/images/fallback.png'"
             class="bet-card__results-icon"

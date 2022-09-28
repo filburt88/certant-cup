@@ -26,7 +26,8 @@ import { MyBetsComponent } from './private/my-bets/my-bets.component';
 import { JackpotScorerComponent } from '../components/jackpot-scorer/jackpot-scorer.component';
 import { JackpotTeamComponent } from '../components/jackpot-team/jackpot-team.component';
 import { JackpotComponent } from './private/jackpot/jackpot.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthErrorCatchInterceptor } from '../core/interceptors/auth-error-catch.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,5 +60,12 @@ import { JackpotComponent } from './private/jackpot/jackpot.component';
     ReactiveFormsModule,
   ],
   exports: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthErrorCatchInterceptor,
+      multi: true,
+    },
+  ],
 })
 export class FeaturesModule {}

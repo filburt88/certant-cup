@@ -1,4 +1,5 @@
 export interface Player {
+  id: number;
   posicion: number;
   bandera: string;
   nombre: string;

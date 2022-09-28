@@ -1,0 +1,39 @@
+@import "../../../assets/styles/main.scss";
+
+.TEST {
+  margin: 30px;
+}
+
+.jackpot-form__scorer-container {
+  width: 300px;
+  border-radius: 15px 15px 0px 0px;
+  background: $white-color;
+}
+
+.jackpot-form__scorer-container-image {
+  max-width: 301px;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.jackpot-form__scorer-inputs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.jackpot-form__scorer-inputs-button {
+  background-color: $secondary-color;
+  color: $primary-text;
+  font-weight: bold;
+}
+
+.jackpot-form__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: $primary-text-dark;
+  margin: 10px auto;
+}

@@ -26,3 +26,20 @@ th {
   font-weight: bold;
   font-size: 14px;
 }
+
+.table__navigation-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $white-color;
+}
+
+.table__navigation-button{
+  margin: 15px 10px;
+  background: $secondary-color;
+}
+
+.table__navigation-page-indicator{
+  font-weight: bold;
+  color: $secondary-text-dark-grey;
+}

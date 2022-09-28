@@ -9,8 +9,8 @@ import { User } from '../models/User';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('fixture/ranking?pagina=1&cantidad=10');
+  getUsers(page:number): Observable<User[]> {
+    return this.http.get<User[]>(`fixture/ranking?pagina=${page}&cantidad=10`);
   }
 
   getMyRanking(): Observable<User> {

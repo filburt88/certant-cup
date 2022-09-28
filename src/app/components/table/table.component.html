@@ -7,7 +7,7 @@
       </th>
       <td mat-cell *matCellDef="let user">{{ user.posicion }}</td>
       <td class="table__footer-cell" mat-footer-cell *matFooterCellDef>
-        {{ myRanking.posicion}}
+        {{ myRanking.posicion }}
       </td>
     </ng-container>
 
@@ -49,3 +49,28 @@
     <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
   </table>
 </section>
+
+<div class="table__navigation-buttons-container">
+  <div>
+    <button
+      class="table__navigation-button"
+      disabled="{{ page === 1 }}"
+      (click)="tenLess()"
+      mat-mini-fab
+      aria-label="Siguiente Pagina"
+    >
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+  </div>
+  <div class="table__navigation-page-indicator">Pagina: {{ currentPage }}</div>
+  <div>
+    <button
+      class="table__navigation-button"
+      (click)="tenMore()"
+      mat-mini-fab
+      aria-label="Siguiente Pagina"
+    >
+      <mat-icon>navigate_next</mat-icon>
+    </button>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ToastsService } from 'src/app/core/services/toasts.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login-form',
@@ -16,7 +17,8 @@ export class LoginFormComponent implements OnInit {
     private fb: FormBuilder,
     private authServ: AuthService,
     private toast: ToastsService,
-    private router: Router
+    private router: Router,
+    private cookieService:CookieService
   ) {}
 
   ngOnInit(): void {
@@ -28,7 +30,9 @@ export class LoginFormComponent implements OnInit {
 
   login(): void {
     this.authServ.login(this.form.value).subscribe({
-      next: () => {
+      next: (res) => {
+        console.log(res)
+        this.cookieService.set('userToken', res)
         this.router.navigate(['home']);
         this.toast.successSnackBar('Bienvenido', 'Ok');
       },

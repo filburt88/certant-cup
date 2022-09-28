@@ -12,4 +12,10 @@ export class TeamService {
   getTeams(): Observable<Team[]> {
     return this.http.get<Team[]>('fixture/equipo', { withCredentials: true });
   }
+
+  postTeam(team: any): Observable<any> {
+    return this.http.post<any>('fixture/campeon', team, {
+      withCredentials: true,
+    });
+  }
 }

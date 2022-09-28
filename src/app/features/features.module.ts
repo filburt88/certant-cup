@@ -23,7 +23,7 @@ import { LoginFormComponent } from '../components/login-form/login-form.componen
 import { LoginComponent } from './public/login/login.component';
 import { BetCardComponent } from '../components/bet-card/bet-card.component';
 import { MyBetsComponent } from './private/my-bets/my-bets.component';
-import { JackpotFormComponent } from '../components/jackpot-form/jackpot-form.component';
+import { JackpotScorerComponent } from '../components/jackpot-form/jackpot-scorer.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { JackpotFormComponent } from '../components/jackpot-form/jackpot-form.co
     CarouselComponent,
     BetCardComponent,
     MyBetsComponent,
-    JackpotFormComponent
+    JackpotScorerComponent,
   ],
   imports: [
     CommonModule,

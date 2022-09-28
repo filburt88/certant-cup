@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BetMatchComponent } from '../components/bet-match/bet-match.component';
-import { JackpotFormComponent } from '../components/jackpot-form/jackpot-form.component';
+import { JackpotScorerComponent } from '../components/jackpot-form/jackpot-scorer.component';
 import { FeaturesComponent } from './features.component';
 import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.component';
 import { HomeComponent } from './private/home/home.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
       { path: 'goleadores', component: TopScorersComponent },
       { path: 'apuesta/:id', component: BetByMatchComponent },
       { path: 'apuestas', component: MyBetsComponent },
-      { path: 'jackpot', component: JackpotFormComponent },
+      { path: 'jackpot', component: JackpotScorerComponent },
     ],
   },
 ];

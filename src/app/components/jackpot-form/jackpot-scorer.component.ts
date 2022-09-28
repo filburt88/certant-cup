@@ -4,13 +4,14 @@ import { Player } from 'src/app/core/models/Player';
 import { Team } from 'src/app/core/models/Team';
 import { PlayerService } from 'src/app/core/services/player.service';
 import { TeamService } from 'src/app/core/services/team.service';
+import { ToastsService } from 'src/app/core/services/toasts.service';
 
 @Component({
-  selector: 'app-jackpot-form',
-  templateUrl: './jackpot-form.component.html',
-  styleUrls: ['./jackpot-form.component.scss'],
+  selector: 'app-jackpot-scorer',
+  templateUrl: './jackpot-scorer.component.html',
+  styleUrls: ['./jackpot-scorer.component.scss'],
 })
-export class JackpotFormComponent implements OnInit {
+export class JackpotScorerComponent implements OnInit {
   form: FormGroup = this.fb.group({
     idJugador: [0, Validators.required],
   });
@@ -20,7 +21,8 @@ export class JackpotFormComponent implements OnInit {
   constructor(
     private TeamService: TeamService,
     private playerService: PlayerService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private toast: ToastsService
   ) {}
 
   ngOnInit(): void {
@@ -32,7 +34,6 @@ export class JackpotFormComponent implements OnInit {
   }
 
   getPlayers(id: number) {
-    console.log('He cambiado', id)
     this.players = [];
     this.form.get('idJugador')?.setValue(0);
     this.playerService.getPlayers(id).subscribe({
@@ -44,8 +45,8 @@ export class JackpotFormComponent implements OnInit {
 
   betScorer() {
     this.playerService.postPlayerBet(this.form.value).subscribe({
-      next: (res) => {
-        console.log(res);
+      next: () => {
+        this.toast.successSnackBar('Apuesta por el goleador guardada', 'Ok');
       },
     });
   }

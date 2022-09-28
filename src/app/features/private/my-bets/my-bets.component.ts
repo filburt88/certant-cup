@@ -15,7 +15,6 @@ export class MyBetsComponent implements OnInit {
   ngOnInit(): void {
     this.betService.getAllBets().subscribe({
       next: (res) => {
-        console.log(res);
         this.bets = res;
       },
     });

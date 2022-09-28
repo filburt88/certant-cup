@@ -61,7 +61,6 @@ export class TableComponent implements OnInit {
 
     this.UserService.getMyRanking().subscribe({
       next: (res) => {
-        console.log(res);
         this.myRanking = res;
       },
     });

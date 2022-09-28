@@ -20,7 +20,7 @@ export class AuthErrorCatchInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       catchError((errorCode) => {
-        this.cookieService.delete('userToken')
+        this.cookieService.delete('userTokenCertant')
         console.error('Codigo del error', errorCode);
         this.router.navigate(['login']);
         return throwError(() => new Error('Unauthorized'));

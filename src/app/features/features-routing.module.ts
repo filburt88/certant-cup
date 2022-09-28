@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../core/guards/auth.guard';
 
 import { FeaturesComponent } from './features.component';
 import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.component';
@@ -12,9 +13,11 @@ import { LoginComponent } from './public/login/login.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: 'certantcup/home', pathMatch: 'full' },
   {
-    path: '',
+    path: 'certantcup',
     component: FeaturesComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'ranking', component: RankingComponent },

@@ -31,8 +31,7 @@ export class LoginFormComponent implements OnInit {
   login(): void {
     this.authServ.login(this.form.value).subscribe({
       next: (res) => {
-        console.log(res)
-        this.cookieService.set('userToken', res)
+        this.cookieService.set('userTokenCertant', res)
         this.router.navigate(['home']);
         this.toast.successSnackBar('Bienvenido', 'Ok');
       },

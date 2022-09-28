@@ -1,34 +1,32 @@
-<div class="TEST">
-  <form [formGroup]="form">
-    <div class="jackpot-form__team-container">
-      <div class="jackpot-form__team-container-image-container">
-        <img
-          class="jackpot-form__team-container-image"
-          src="../../../assets/images/champion.png"
-          alt="Goleador del mundial"
-        />
-      </div>
-      <div class="jackpot-form__title">Selecciona al campeón</div>
-      <div class="jackpot-form__team-inputs-container">
-        <mat-form-field appearance="fill">
-          <mat-label>País</mat-label>
-          <mat-select formControlName="idCampeon">
-            <mat-option *ngFor="let team of teams" [value]="team.id">{{
-              team.nombre
-            }}</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <div class="jackpot-form__team-inputs-button-container">
-          <button
-            class="jackpot-form__team-inputs-button"
-            (click)="betChampion()"
-            [disabled]="false"
-            mat-raised-button
-          >
-            Apostar
-          </button>
-        </div>
+<form [formGroup]="form">
+  <div class="jackpot-form__team-container">
+    <div class="jackpot-form__team-container-image-container">
+      <img
+        class="jackpot-form__team-container-image"
+        src="../../../assets/images/champion.png"
+        alt="Goleador del mundial"
+      />
+    </div>
+    <div class="jackpot-form__title">Selecciona al campeón</div>
+    <div class="jackpot-form__team-inputs-container">
+      <mat-form-field appearance="fill">
+        <mat-label>País</mat-label>
+        <mat-select formControlName="idCampeon">
+          <mat-option *ngFor="let team of teams" [value]="team.id">{{
+            team.nombre
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="jackpot-form__team-inputs-button-container">
+        <button
+          class="jackpot-form__team-inputs-button"
+          (click)="betChampion()"
+          [disabled]="false"
+          mat-raised-button
+        >
+          Apostar
+        </button>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+</form>

@@ -25,6 +25,7 @@ import { BetCardComponent } from '../components/bet-card/bet-card.component';
 import { MyBetsComponent } from './private/my-bets/my-bets.component';
 import { JackpotScorerComponent } from '../components/jackpot-scorer/jackpot-scorer.component';
 import { JackpotTeamComponent } from '../components/jackpot-team/jackpot-team.component';
+import { JackpotComponent } from './private/jackpot/jackpot.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { JackpotTeamComponent } from '../components/jackpot-team/jackpot-team.co
     MyBetsComponent,
     JackpotScorerComponent,
     JackpotTeamComponent,
+    JackpotComponent,
   ],
   imports: [
     CommonModule,

@@ -28,6 +28,8 @@ import { JackpotTeamComponent } from '../components/jackpot-team/jackpot-team.co
 import { JackpotComponent } from './private/jackpot/jackpot.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthErrorCatchInterceptor } from '../core/interceptors/auth-error-catch.interceptor';
+import { MyaccountBetCardComponent } from '../components/myaccount-bet-card/myaccount-bet-card.component';
+import { MyaccountComponent } from './private/myaccount/myaccount.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { AuthErrorCatchInterceptor } from '../core/interceptors/auth-error-catch
     JackpotScorerComponent,
     JackpotTeamComponent,
     JackpotComponent,
+    MyaccountBetCardComponent,
+    MyaccountComponent,
   ],
   imports: [
     CommonModule,

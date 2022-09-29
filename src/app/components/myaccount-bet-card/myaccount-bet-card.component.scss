@@ -1,0 +1,74 @@
+@import "../../../assets/styles/main.scss";
+
+.my-account__container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .my-account__container {
+    flex-direction: row;
+  }
+}
+
+.myaccount-bet-card {
+  height: 250px;
+  width: 250px;
+  background-image: url("../../../assets/images/top-scorer.png");
+  object-fit: contain;
+  object-position: left;
+  border-radius: 15px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myaccount-bet-card-title {
+  color: $primary-text;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+}
+
+.myaccount-bet-card-scorer {
+  color: $primary-text;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+}
+
+.myaccount-champion-card {
+  height: 250px;
+  width: 250px;
+  background-image: url("../../../assets/images/champion-card.png");
+  object-fit: contain;
+  object-position: left;
+  border-radius: 15px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.myaccount-champion-card-title {
+  color: $primary-text;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+}
+
+.myaccount-champion-card-bet {
+  color: $primary-text;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+}

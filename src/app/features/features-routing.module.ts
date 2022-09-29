@@ -7,6 +7,7 @@ import { BetByMatchComponent } from './private/bet-by-match/bet-by-match.compone
 import { HomeComponent } from './private/home/home.component';
 import { JackpotComponent } from './private/jackpot/jackpot.component';
 import { MyBetsComponent } from './private/my-bets/my-bets.component';
+import { MyaccountComponent } from './private/myaccount/myaccount.component';
 import { RankingComponent } from './private/ranking/ranking.component';
 import { TopScorersComponent } from './private/top-scorers/top-scorers.component';
 import { LoginComponent } from './public/login/login.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'apuesta/:id', component: BetByMatchComponent },
       { path: 'apuestas', component: MyBetsComponent },
       { path: 'jackpot', component: JackpotComponent },
+      { path: 'micuenta', component: MyaccountComponent },
     ],
     component: FeaturesComponent,
   },

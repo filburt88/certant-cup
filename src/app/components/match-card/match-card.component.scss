@@ -16,7 +16,7 @@
 
 .card {
   width: 350px;
-  height: 316px;
+  height: 332px;
   margin: 20px;
 }
 
@@ -84,9 +84,20 @@
 .card__action-button {
   background: $secondary-color;
   color: $primary-text;
+
+  &--bet-made {
+    background: $blue-color;
+    color: $primary-text;
+  }
 }
 
 .card__date {
   font-weight: bold;
   color: $accent-text;
+}
+
+.card__info-bet-made {
+  color: $secondary-text-dark-grey;
+  font-size: 12px;
+  padding-bottom: 0px;
 }

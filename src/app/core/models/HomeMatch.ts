@@ -4,6 +4,7 @@ export interface HomeMatch {
   estadio: string;
   estado: string;
   fecha: string;
+  fueApostado?: boolean;
   resultadoReal: {
     idLocal: number;
     nombreLocal: string;

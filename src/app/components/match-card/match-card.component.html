@@ -56,18 +56,32 @@
     <mat-card-content class="card__info-container">
       <div class="card__date">{{ match.fecha | date: "dd/MM/yy HH:mm" }}</div>
       <div class="card__status">Estado de las apuestas: {{ match.estado }}</div>
+      <ng-container *ngIf="match.fueApostado === true">
+        <div class="card__info-bet-made">Ya apostaste por este partido</div>
+      </ng-container>
     </mat-card-content>
     <mat-card-actions
       class="card__action-container"
       *ngIf="match.estado === 'Abierta'"
     >
-      <button
-        class="card__action-button"
-        mat-raised-button
-        (click)="openDialog(match)"
-      >
-        Apostar
-      </button>
+      <ng-container *ngIf="match.fueApostado === false">
+        <button
+          class="card__action-button"
+          mat-raised-button
+          (click)="openDialog(match)"
+        >
+          Apostar
+        </button>
+      </ng-container>
+      <ng-container *ngIf="match.fueApostado === true">
+        <button
+          class="card__action-button--bet-made"
+          mat-raised-button
+          (click)="openDialog(match)"
+        >
+          Cambiar Apuesta
+        </button>
+      </ng-container>
     </mat-card-actions>
   </mat-card>
 </div>

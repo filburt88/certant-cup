@@ -17,4 +17,8 @@ export class AuthService {
       withCredentials: true,
     });
   }
+
+  logout(): Observable<any> {
+    return this.http.get('fixture/logout', { withCredentials: true });
+  }
 }

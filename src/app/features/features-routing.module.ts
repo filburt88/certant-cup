@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'certantcup/home', pathMatch: 'full' },
   {
     path: 'certantcup',
-    component: FeaturesComponent,
     canActivate: [AuthGuard],
     children: [
       { path: 'home', component: HomeComponent },
@@ -26,6 +25,7 @@ const routes: Routes = [
       { path: 'apuestas', component: MyBetsComponent },
       { path: 'jackpot', component: JackpotComponent },
     ],
+    component: FeaturesComponent,
   },
 ];
 

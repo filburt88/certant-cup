@@ -11,6 +11,14 @@
           link | uppercase
         }}</a>
       </div>
+      <a
+        (click)="logout()"
+        routerLink="/login"
+        class="sidenav__drawer-links-logout"
+        ><mat-icon class="sidenav__drawer-links-logout-icon"
+          >exit_to_app</mat-icon
+        >LOGOUT
+      </a>
     </div>
   </mat-drawer>
   <mat-drawer-content>

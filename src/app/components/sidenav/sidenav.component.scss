@@ -1,6 +1,6 @@
 @import "../../../assets/styles/main.scss";
 
-.sidenav__container{
+.sidenav__container {
   background: linear-gradient(116.59deg, #040f5e 0.34%, #300008 100%);
 }
 
@@ -78,3 +78,11 @@ a {
   }
 }
 
+.sidenav__drawer-links-logout {
+  display: flex;
+  align-items: center;
+}
+
+.sidenav__drawer-links-logout-icon {
+  margin: auto 5px;
+}

@@ -25,6 +25,6 @@ export class MatchCardComponent implements OnInit {
   }
 
   redirectToMatch(match: HomeMatch): void {
-    this.router.navigate(['apuesta/' + match.idPartido]);
+    this.router.navigate(['certantcup/apuesta/' + match.idPartido]);
   }
 }

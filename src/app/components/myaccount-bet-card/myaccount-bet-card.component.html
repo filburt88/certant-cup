@@ -1,15 +1,23 @@
 <div class="my-account__container">
   <div class="myaccount-bet-card">
     <div class="myaccount-bet-card-title">Tu apuesta por el Goleador</div>
-    <div class="myaccount-bet-card-scorer">
-      {{ jackpot.jugadorGoleador }} {{ jackpot.equipoJugadorGoleador }}
-    </div>
+    <ng-container *ngIf="jackpot.jugadorGoleador; else elseApuesta">
+      <div class="myaccount-bet-card-scorer">
+        {{ jackpot.jugadorGoleador }} {{ jackpot.equipoJugadorGoleador }}
+      </div>
+    </ng-container>
   </div>
 
   <div class="myaccount-champion-card">
     <div class="myaccount-champion-card-title">Tu apuesta por el Campeón</div>
-    <div class="myaccount-champion-card-bet">
-      {{ jackpot.equipoCampeon }}
-    </div>
+    <ng-container *ngIf="jackpot.equipoCampeon; else elseApuesta">
+      <div class="myaccount-champion-card-bet">
+        {{ jackpot.equipoCampeon }}
+      </div>
+    </ng-container>
   </div>
 </div>
+
+<ng-template #elseApuesta>
+  <div class="myaccount-bet__else-block">No hay apuesta aún</div>
+</ng-template>

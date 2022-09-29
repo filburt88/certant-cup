@@ -3,5 +3,5 @@
   <div *ngFor="let bet of bets">
     <app-bet-card [bet]="bet"></app-bet-card>
   </div>
-  
+  <div class="my-bets__empty-array" *ngIf="bets.length === 0">Aún no realizaste ninguna apuesta</div>
 </div>

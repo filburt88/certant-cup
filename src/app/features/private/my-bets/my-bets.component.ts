@@ -8,7 +8,7 @@ import { BetService } from 'src/app/core/services/bet.service';
   styleUrls: ['./my-bets.component.scss'],
 })
 export class MyBetsComponent implements OnInit {
-  bets!: BetMatch[];
+  bets: BetMatch[] = []
 
   constructor(private betService: BetService) {}
 

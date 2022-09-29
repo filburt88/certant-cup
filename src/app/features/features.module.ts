@@ -30,6 +30,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthErrorCatchInterceptor } from '../core/interceptors/auth-error-catch.interceptor';
 import { MyaccountBetCardComponent } from '../components/myaccount-bet-card/myaccount-bet-card.component';
 import { MyaccountComponent } from './private/myaccount/myaccount.component';
+import { DialogBetComponent } from '../components/dialog-bet/dialog-bet.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MyaccountComponent } from './private/myaccount/myaccount.component';
     JackpotComponent,
     MyaccountBetCardComponent,
     MyaccountComponent,
+    DialogBetComponent,
   ],
   imports: [
     CommonModule,

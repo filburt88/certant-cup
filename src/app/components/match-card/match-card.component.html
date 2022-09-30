@@ -57,7 +57,7 @@
       <div class="card__date">{{ match.fecha | date: "dd/MM/yy HH:mm" }}</div>
       <div class="card__status">Estado de las apuestas: {{ match.estado }}</div>
       <ng-container *ngIf="match.fueApostado === true">
-        <div class="card__info-bet-made">Ya apostaste por este partido</div>
+        <div class="card__info-bet-made">Apostaste por este partido</div>
       </ng-container>
     </mat-card-content>
     <mat-card-actions

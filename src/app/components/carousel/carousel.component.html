@@ -3,6 +3,20 @@
   class="carousel"
   [showNavigationIndicators]="false"
 >
+  <ng-template ngbSlide class="carousel__slide-container">
+    <a (click)="redirectTo()">
+      <div>
+        <img
+          class="carousel-slide"
+          src="../../../assets/carouselImages/select-top-player.png"
+          alt="Random first slide"
+        />
+      </div>
+      <div class="carousel-caption">
+        <h4>Selecciona al goleador del mundial</h4>
+      </div>
+    </a>
+  </ng-template>
   <ng-template ngbSlide *ngFor="let slide of images">
     <div class="carousel__slide-container">
       <div>

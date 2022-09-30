@@ -14,6 +14,7 @@ import { ToastsService } from 'src/app/core/services/toasts.service';
   styleUrls: ['./dialog-bet.component.scss'],
 })
 export class DialogBetComponent implements OnInit {
+
   form: FormGroup = this.fb.group({
     golesLocal: [0, [Validators.required, Validators.max(31)]],
     golesVisitante: [0, [Validators.required, Validators.max(31)]],

@@ -21,7 +21,7 @@
         <button
           class="jackpot-form__team-inputs-button"
           (click)="betChampion()"
-          [disabled]="false"
+          [disabled]="isValid()"
           mat-raised-button
         >
           Apostar

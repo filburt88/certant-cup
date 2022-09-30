@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface Slide {
   image: string;
@@ -13,10 +14,6 @@ interface Slide {
 })
 export class CarouselComponent implements OnInit {
   images: Slide[] = [
-    {
-      image: `../../../assets/carouselImages/select-top-player.png`,
-      caption: 'Selecciona al Goleador',
-    },
     {
       image: `../../../assets/carouselImages/grupo_1.png`,
     },
@@ -42,6 +39,12 @@ export class CarouselComponent implements OnInit {
       image: `../../../assets/carouselImages/grupo_8.png`,
     },
   ];
+
+  constructor(private router: Router) {}
+
+  redirectTo() {
+    this.router.navigate(['certantcup/jackpot']);
+  }
 
   ngOnInit(): void {}
 }

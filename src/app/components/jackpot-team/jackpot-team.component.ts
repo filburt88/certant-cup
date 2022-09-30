@@ -36,4 +36,12 @@ export class JackpotTeamComponent implements OnInit {
       },
     });
   }
+
+  isValid() {
+    if (this.form.get('idCampeon')?.value !== 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }

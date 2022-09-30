@@ -8,7 +8,8 @@ import { BetService } from 'src/app/core/services/bet.service';
   styleUrls: ['./my-bets.component.scss'],
 })
 export class MyBetsComponent implements OnInit {
-  bets: BetMatch[] = []
+  betMessage: string = '';
+  bets: BetMatch[] = [];
 
   constructor(private betService: BetService) {}
 
@@ -16,6 +17,11 @@ export class MyBetsComponent implements OnInit {
     this.betService.getAllBets().subscribe({
       next: (res) => {
         this.bets = res;
+      },
+      complete: () => {
+        if (this.bets.length === 0) {
+          this.betMessage = 'Aún no realizaste ninguna apuesta';
+        }
       },
     });
   }

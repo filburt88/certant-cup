@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
 import { HomeMatch } from 'src/app/core/models/HomeMatch';
 import { HomeMatchService } from 'src/app/core/services/home-match.service';
 import { DialogBetComponent } from '../dialog-bet/dialog-bet.component';
@@ -26,7 +25,6 @@ export class MatchCardComponent implements OnInit {
     this.HomeMatchService.getHomeMatch().subscribe({
       next: (res) => {
         this.matches = res;
-        console.log(this.matches);
       },
     });
   }

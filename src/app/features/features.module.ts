@@ -31,6 +31,8 @@ import { AuthErrorCatchInterceptor } from '../core/interceptors/auth-error-catch
 import { MyaccountBetCardComponent } from '../components/myaccount-bet-card/myaccount-bet-card.component';
 import { MyaccountComponent } from './private/myaccount/myaccount.component';
 import { DialogBetComponent } from '../components/dialog-bet/dialog-bet.component';
+import { LoaderComponent } from '../components/loader/loader.component';
+import { SpinnerInterceptor } from '../core/interceptors/spinner.interceptor';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { DialogBetComponent } from '../components/dialog-bet/dialog-bet.componen
     MyaccountBetCardComponent,
     MyaccountComponent,
     DialogBetComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
@@ -70,6 +73,11 @@ import { DialogBetComponent } from '../components/dialog-bet/dialog-bet.componen
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthErrorCatchInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: SpinnerInterceptor,
       multi: true,
     },
   ],

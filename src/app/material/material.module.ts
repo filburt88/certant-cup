@@ -10,6 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class MaterialModule {}
